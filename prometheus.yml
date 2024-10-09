@@ -1,0 +1,9 @@
+global:
+  scrape_interval: 1m
+
+scrape_configs:
+  - job_name: 'rdsrecorder'
+    metrics_path: /metrics
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['rdsrecorder:9445']
